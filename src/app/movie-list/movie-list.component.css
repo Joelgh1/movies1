@@ -1,0 +1,17 @@
+.movieItem {
+  background-color: lightgray;
+  margin-left: 5em;
+  border-radius: 10px;
+  margin-top: 1em;
+  padding: .5em;
+  width: 15%;
+}
+
+.movieItem:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: lightcoral;
+}

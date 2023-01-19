@@ -1,0 +1,4 @@
+<div *ngFor="let movie of movieList" class="movieItem" [class.selected]="movie===selectedMovie"
+  (click)="selectMovie(movie)">
+  {{movie.title}} {{movie.year}}
+</div>
