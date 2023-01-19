@@ -1,2 +1,6 @@
 <h2>Movie list:</h2>
-<app-movie-list></app-movie-list>
+<div class="movieContainer">
+  <app-movie-list (movie)="onSelect($event)"></app-movie-list>
+  <app-movie-poster [movie]="selectedMovie"></app-movie-poster>
+</div>
+<app-movie-plot [movie]="selectedMovie"></app-movie-plot>

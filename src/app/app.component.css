@@ -1,0 +1,9 @@
+.movieContainer {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+
+app-movie-list {
+  width: 50%;
+}

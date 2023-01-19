@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { Movie } from './shared/Movie';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'movies1';
+  selectedMovie?: Movie
+
+  onSelect(movie: Movie) {
+    this.selectedMovie = movie
+  }
 }

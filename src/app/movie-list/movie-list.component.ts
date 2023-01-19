@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MoviesService } from '../movies.service';
 import { Movie } from '../shared/Movie';
 
@@ -9,6 +9,7 @@ import { Movie } from '../shared/Movie';
 })
 export class MovieListComponent {
 
+  @Output() movie = new EventEmitter<Movie>()
   selectedMovie?: Movie
 
   movieList: Movie[]
@@ -19,8 +20,7 @@ export class MovieListComponent {
 
   selectMovie(movie: Movie) {
     this.selectedMovie = movie
-    alert(
-      `Título: ${movie.title} Año: ${movie.year} Géneros: ${movie.genre}`)
+    this.movie.emit(movie)
   }
 
 }
